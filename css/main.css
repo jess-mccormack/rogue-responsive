@@ -153,7 +153,7 @@ header nav ul li a{
 /******************** MENU MODULE / SECTION-ONE ********************/
 
 .section-one h4 {
-		padding: 10px 30px;
+		padding: 10px 25px;
 }
 
 .menu {
@@ -162,38 +162,37 @@ header nav ul li a{
 }
 
 .menu li {
-		padding: 10px 30px;
+		padding: 10px 25px;
 		color:#77a466;
 }
 
 /******************** REVIEWS MODULE / SECTION-TWO ********************/
 
 .section-two {
-		border-left: 1px solid #eee;
-		border-right: 1px solid #eee;
+		padding: 10px 10px;
 }
 
 .section-two h4  {
-		padding: 10px 15px;
+		padding: 10px 10px;
 }
 
 .reviews {
 		color: #333;
 		font-size: 1em;
 		line-height: 1.3em;
-		padding: 0 15px;
+		padding: 0 10px;
 }
 
 /******************** CONTACT MODULE / SECTION-THREE ********************/
 
 .section-three h4 {
-		padding: 10px 30px;
+		padding: 10px 25px;
 }
 
 .address {
 		font-size: 1em;
 		line-height: 1.5em;
-		padding: 0 30px;
+		padding: 0 25px;
 }
 
 /******************** FOOTER ********************/
@@ -230,7 +229,7 @@ footer span {
 	.section-one,
 	.section-two,
 	.section-three {
-			min-height: 350px;
+				align-items: flex-start;
 	}
 }
 /******************** DESKTOP ********************/
@@ -269,7 +268,7 @@ footer span {
 		.section-one,
 		.section-two,
 		.section-three {
-				min-height: 250px;
+				align-items: flex-start;
 		}
 
 		.reviews {
