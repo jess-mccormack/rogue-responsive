@@ -6,25 +6,25 @@
 /******************** UNIVERSAL ELEMENTS ********************/
 
 html {
-		font-size: 16px;  /* JM */
+		font-size: 16px;
 }
 
 body {
 		font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-		font-size: 1em; /* JM */
-
-		display: flex;  /* JM */
+		font-size: 1em;
+		display: flex;
 		justify-content: center;
 		align-items: center;
+		flex-wrap: wrap;
 }
 
 .container {
 		max-width: 1200px;
-		margin: 0 auto;
-
-		display: flex;  /* JM */
+		width: 90%;
+		display: flex;
 		justify-content: center;
 		align-items: center;
+		flex-wrap: wrap;
 }
 
 /******************** TEXT STYLES ********************/
@@ -35,7 +35,7 @@ h3,
 h4 {
 		color: black;
 		text-transform: uppercase;
-		font-weight: 700;
+		font-weight: 700
 }
 
 h1 {
@@ -63,18 +63,15 @@ p {
 /******************** HEADER ********************/
 
 header {
-		height: 110px;
-		border-bottom: 3px solid #77a466;
-		margin: 0 auto;
-
 		display: flex;  /* JM */
 		justify-content: center;
 		align-items: center;
+		flex-wrap: wrap;
 }
 
 header h1 {
 		margin: 0;
-		padding: 38px 0;
+		padding: 38px 20px 20px 20px;
 }
 
 header h1 span {
@@ -82,20 +79,22 @@ header h1 span {
 }
 
 header nav {
-		padding: 46px 0;
+		border-top: 3px solid #77a466;
+		width: 100%;
 }
 
 header nav ul {
-		margin: 0;
 		padding: 0;
+		width: 100%;
 }
 
 header nav ul li {
+		text-align: center;
 		text-transform: uppercase;
 		font-weight: 700;
 		font-size: .9em;
-		padding: 0 10px;
-		display: inline;
+		padding: 10px 0;
+		list-style: none;
 }
 
 header nav ul li a{
@@ -107,20 +106,22 @@ header nav ul li a{
 
 .top-section,
 .bottom-section {
-		margin: 0 auto;
-		clear: both;
-
+		width: 100%;
 		display: flex;  /* JM */
 		justify-content: center;
 		align-items: center;
+		flex-wrap: wrap;
 }
 
+/******************** HERO & INTRO ********************/
+
 .main-image {
-		height: auto;
+		/* height: auto; */
 }
 
 .main-image img {
 		width: 100%;
+		border-top: 3px solid #77a466;
 		border-bottom: 3px solid #77a466;
 }
 
@@ -137,28 +138,21 @@ header nav ul li a{
 .main-title p {
 		padding: 0;
 		font-size: 1em;
-		line-height: 25px;
+		line-height: 1.6em;
 }
+
+/******************** MODULES ********************/
 
 .section-one,
 .section-two,
 .section-three {
-		width: 33%;
-		height: auto;
 		border-top: 1px solid #eee;
+		width: 100%;
 }
+
+/******************** MENU MODULE / SECTION-ONE ********************/
 
 .section-one h4 {
-		padding: 10px 0;
-}
-
-.section-two {
-		border-left: 1px solid #eee;
-		border-right: 1px solid #eee;
-}
-
-.section-two h4,
-.section-three h4 {
 		padding: 10px 30px;
 }
 
@@ -168,32 +162,52 @@ header nav ul li a{
 }
 
 .menu li {
-		padding: 10px 0;
+		padding: 10px 30px;
 		color:#77a466;
+}
+
+/******************** REVIEWS MODULE / SECTION-TWO ********************/
+
+.section-two {
+		border-left: 1px solid #eee;
+		border-right: 1px solid #eee;
+}
+
+.section-two h4  {
+		padding: 10px 15px;
 }
 
 .reviews {
 		color: #333;
 		font-size: 1em;
-		line-height: 21px;
+		line-height: 1.3em;
+		padding: 0 15px;
+}
+
+/******************** CONTACT MODULE / SECTION-THREE ********************/
+
+.section-three h4 {
+		padding: 10px 30px;
 }
 
 .address {
 		font-size: 1em;
-		line-height: 24px;
+		line-height: 1.5em;
+		padding: 0 30px;
 }
 
 /******************** FOOTER ********************/
 
 footer {
-		height: 50px;
 		border-top: 3px solid #eee;
 		margin: 0 auto;
 		text-align: center;
+		width: 100%;
 
 		display: flex; /* JM */
 		justify-content: center;
 		align-items: center;
+		flex-wrap: wrap;
 }
 
 footer span {
@@ -201,4 +215,65 @@ footer span {
 		text-transform: lowercase;
 		color: #77a466;
 		font-size: .9em;
+}
+
+/******************** BREAKPOINTS ********************/
+
+/******************** TABLET ********************/
+@media all and (min-width: 768px) {
+
+	.bottom-section {
+			width: 100%;
+			flex-flow: row nowrap;
+	}
+
+	.section-one,
+	.section-two,
+	.section-three {
+			min-height: 350px;
+	}
+}
+/******************** DESKTOP ********************/
+@media all and (min-width: 1200px) {
+
+		html {
+				font-size: 18px;
+		}
+
+		header {
+				justify-content: space-between;
+				min-height: 110px;
+				width: 100%
+		}
+
+		header h1 {
+				width: 30%;
+				padding: 0;
+				border-bottom: none;
+		}
+
+		header nav {
+				border: none;
+				width: 52%;
+		}
+
+		header nav ul {
+				justify-content: space-between;
+				display: flex;
+		}
+
+		header nav ul li {
+				padding: 0 10px;
+		}
+
+		.section-one,
+		.section-two,
+		.section-three {
+				min-height: 250px;
+		}
+
+		.reviews {
+				line-height: 1.6em;
+		}
+
 }
